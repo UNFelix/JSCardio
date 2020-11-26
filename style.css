@@ -7,38 +7,44 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
-#button.clicked {
-  background-color: #f44336;
+dialog {
+  top: 50%;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+dialog::backdrop {
+  backdrop-filter: blur(3px);
 }
 
-.toggler {
-  position: relative;
-  width: 40px;
-  height: 25px;
-  background-color: #ed5368;
-  border-radius: 12px;
-  transition: 0.5s;
+#close {
+  background: none;
   border: none;
-}
-.toggler::after {
   position: absolute;
-  transition: 0.5s;
-  top: 3px;
-  left: 18px;
-  content: "";
-  width: 19px;
-  height: 19px;
-  background-color: #fff;
-  border-radius: 9.5px;
-}
-.toggler.on {
-  background-color: #ace1af;
-}
-.toggler.on::after {
-  left: 3px;
-}
-.toggler.on:focus {
+  right: -25px;
+  top: -5px;
   outline: none;
+  cursor: pointer;
+}
+
+.checked input:invalid {
+  border-color: orangered;
+  outline: none;
+}
+.checked input {
+  border-color: lime;
+  outline: none;
+}
+fieldset {
+  padding: 50px;
+  background-color: lightskyblue;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: left;
+  border: 2px solid;
+  border-radius: 10px;
 }

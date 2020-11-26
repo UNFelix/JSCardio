@@ -1,3 +1,7 @@
+const toggler = document.getElementsByClassName('toggler')[0]
+toggler.onclick = () => toggler.classList.toggle('on')
+
+
 const paragraphs = document.getElementsByTagName('p')
 paintP(paragraphs)
 hoverHandler(paragraphs, rewriteColor)
